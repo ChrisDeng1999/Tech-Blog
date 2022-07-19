@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>BattleStrategy</title>
+  <title>TechBlog</title>
   {{!-- bootstrap link --}}
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
   {{!-- personal style sheet links --}}
@@ -14,12 +14,13 @@
 
 <body id = "log">
   <header class="display-flex justify-space-between align-center p-2">
-      <h1><span>TechBlog</span></h1>
       <nav>
-        <!-- Conditionally render login or logout links -->
-        {{#if logged_in}}
-        <button class="btn btn-primary" id="logout">logout</button>
-        {{/if}}
+    
+        <button class="btn btn-primary" id="logout">Home</button>
+        <button class="btn btn-primary" id="logout">Dashboard</button>
+        <button class="btn btn-primary" id="logout">Login</button>
+        <button class="btn btn-primary" id="logout">Logout</button>
+        <h1><span>TechBlog</span></h1>
       </nav>
     </header>
   <main>
@@ -28,8 +29,9 @@
   <footer>
       
   </footer>
+  {{#if logged_in}}
+  <script src="/js/logout.js"></script>
+  {{/if}}
 </body>
-
-<script src="/js/script.js"></script>
 
 </html>

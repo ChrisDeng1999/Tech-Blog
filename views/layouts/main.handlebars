@@ -16,9 +16,11 @@
   <header class="display-flex justify-space-between align-center p-2">
       <nav>
     
-        <button class="btn btn-primary" id="logout">Home</button>
-        <button class="btn btn-primary" id="logout">Dashboard</button>
-        <button class="btn btn-primary" id="logout">Login</button>
+        <a href = "/"><button class="btn btn-primary" id="logout">Home</button></a>
+        <a href = "/dashboard"><button class="btn btn-primary" id="logout">Dashboard</button></a>
+        {{#unless logged_in}}
+        <a href = "/login"><button class="btn btn-primary" id="logout">Login</button></a>
+         {{/unless}}
         <button class="btn btn-primary" id="logout">Logout</button>
         <h1><span>TechBlog</span></h1>
       </nav>
